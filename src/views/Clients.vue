@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="Clients">
+    <div class="section" id="clients">
         <div class="wrap">
             <div class="fp-tableCell clients-content">
                 <div class="box">

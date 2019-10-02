@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import VueScrollTo from 'vue-scrollto'
+
+import Loyaut from './Loyaut'
 import Home from './views/Home'
 import Features from './views/Features'
 
@@ -7,11 +10,13 @@ Vue.use(Router);
 
 export default new Router({
   // mode: 'hash',
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'loyaut',
+      component: Loyaut
+
     },
     {
       path: '/features',
@@ -76,32 +81,25 @@ export default new Router({
     }
   ],
 
-  scrollBehavior (to, from, savedPosition) {
-    if (savedPosition) {
-      // savedPosition is only available for popstate navigations.
-      return savedPosition
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      VueScrollTo.scrollTo(to.hash, 700);
+      return { selector: to.hash }
+    } else if (savedPosition) {
+      return savedPosition;
     } else {
-      const position = {}
-
-      // scroll to anchor by returning the selector
-      if (to.hash) {
-        position.selector = to.hash
-
-        // specify offset of the element
-        if (to.hash === '#anchor2') {
-          position.offset = { y: 100 }
-        }
-
-        // bypass #1number check
-        if (/^#\d/.test(to.hash) || document.querySelector(to.hash)) {
-          return position
-        }
-
-        // if the returned position is falsy or an empty object,
-        // will retain current scroll position.
-        return false
-      }
+      return { x: 0, y: 0 }
     }
   }
 
+
+/*
+    scrollBehavior (to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                selector: to.hash
+                // , offset: { x: 0, y: 10 }
+            }
+        }
+    }*/
 })

@@ -1,6 +1,6 @@
 <template>
 
-    <div class="section" id="Download">
+    <div class="section" id="download">
         <div class="wrap">
             <div class="box">
                 <!-- SECTION DOWNLOAD CONTENT-->

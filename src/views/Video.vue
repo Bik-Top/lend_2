@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="Video">
+    <div class="section" id="video">
         <div class="wrap">
             <div class="box">
                 <!-- SECTION VIDEO CONTENT -->

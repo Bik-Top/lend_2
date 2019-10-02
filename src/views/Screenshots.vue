@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="Screenshots">
+    <div class="section" id="screenshots">
         <div class="wrap">
             <div class="box">
                 <div class="fp-tableCell screenshots-content">

@@ -1,5 +1,5 @@
 <template>
-    <div class="section" id="Contact">
+    <div class="section" id="contact">
         <div class="wrap">
             <div class="box">
                 <!-- SECTION CONTACT CONTENT-->

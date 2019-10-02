@@ -1,52 +1,29 @@
 <template>
-    <div class="home">
-      <!--<img alt="Vue logo" src="../assets/logo.png">
-       <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+    <div class="section" id="Home">
 
-        <!--<Home></Home>-->
-        <Features></Features>
-        <About></About>
-        <Video></Video>
-        <Clients></Clients>
-        <Screenshots></Screenshots>
-        <Pricing></Pricing>
-        <Download></Download>
-        <Contact></Contact>
+        <div class="wrap">
+            <div class="box">
+                <!-- SECTION HOME CONTENT -->
+                <h1>The online search is now <br><strong>a treasure hunt</strong></h1>
+                <h3 font color = "#ff6633"> <strong>300,000 listings and counting
+                </strong>- is your biz here?.</h3>
+                <!---->
+                <form role="form" method="post" id="contact-form">
+                    <input type="text" placeholder="Business" name="Business" id="business" required>
+
+
+                    <div id="success"></div>
+                </form>
+
+            </div>
+            <!-- END SECTION HOME CONTENT -->
+        </div>
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
-/*import Home from '@/views/Home.vue'*/
-import Features from '@/views/Features.vue'
-import About from '@/views/About.vue'
-import Video from '@/views/Video.vue'
-import Clients from '@/views/Clients.vue'
-import Screenshots from '@/views/Screenshots.vue'
-import Pricing from '@/views/Pricing.vue'
-import Download from '@/views/Download.vue'
-import Contact from '@/views/Contact.vue'
-
-
-// import HelloWorld from '@/components/HelloWorld.vue'
-
-
-
-
 export default {
   name: 'home',
-  components: {
-  /*  HelloWorld,
-      Home,*/
-      Features,
-      About,
-      Video,
-      Clients,
-      Screenshots,
-      Pricing,
-      Download,
-      Contact
-  },
   watch: {
     '$route' (to, from) {
       const toDepth = to.path.split('/').length;
